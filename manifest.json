@@ -1,0 +1,8 @@
+{
+    "name": "KasaBridge",
+    "version": "1.0.0",
+    "description": "Custom Kasa integration",
+    "main": "index.js",
+    "author": "Austin Berry",
+    "type": "addon"
+}
