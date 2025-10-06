@@ -1,5 +1,27 @@
-//const net = require('net');
-import net from 'net';
+const net = require('net');
+//import net from 'net';
+
+const devices = [
+    {
+        name: "Office Bulb 1",
+        id: "kasa-1",
+        ip: "10.0.0.93",
+        deviceType: "external",
+        zones: [{id: 0, name:"Office Main"}],
+        capabilities: ["color"],
+        type: "light"
+    },
+    {
+        name: "Office Bulb 2",
+        id: "kasa-2",
+        ip: "10.0.0.238",
+        deviceType: "external",
+        zones:[{id: 1, name: "Office Main 2"}],
+        capabilities: ["color"],
+        type: "light"
+    }
+];
+
 
 function encrypt(payload) {
     let key = 171; // ✅ use let so it can be reassigned
@@ -123,26 +145,6 @@ function buildKasaCommand(rgb) {
         }
     };
 }
-
-
-const devices = [
-    {
-        name: "Office Bulb 1",
-        id: "kasa-1",
-        ip: "10.0.0.93",
-        zones: [0],
-        capabilities: ["color"],
-        type: "light"
-    },
-    {
-        name: "Office Bulb 2",
-        id: "kasa-2",
-        ip: "10.0.0.238",
-        zones:[1],
-        capabilities: ["color"],
-        type: "light"
-    }
-];
 
 const updateInterval = 100; // ms
 const lastUpdate = {};
