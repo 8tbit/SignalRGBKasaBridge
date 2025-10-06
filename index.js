@@ -148,7 +148,7 @@ const updateInterval = 100; // ms
 const lastUpdate = {};
 
 
-function onFrame() {
+async function onFrame() {
     const now = Date.now();
 
     for (const device of devices) {
