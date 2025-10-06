@@ -174,8 +174,8 @@ function onClose() {
 module.exports = {
     name: "Kasa Bulb Plugin",
     author: "Austin Berry",
+    type: "device",
     devices,
-    type: "light",
     capabilities: ["color"],
     onInit,
     onFrame,
